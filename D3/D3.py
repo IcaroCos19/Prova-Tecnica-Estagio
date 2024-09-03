@@ -3,7 +3,7 @@ import json
 with open('D3.json', 'r') as file:
     dados = json.load(file)
 
-faturamento_diario = [dia["valor"] for dia in dados["faturamento_diario"] if dia["valor"] > 0]
+faturamento_diario = [dia["valor"] for dia in dados if dia["valor"] > 0]
 
 min_faturamento = min(faturamento_diario)
 
